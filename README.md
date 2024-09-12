@@ -3,10 +3,11 @@
 The goal of this project is to implement a simple and extensible calculator in Java that adheres to object-oriented design principles, particularly the Open-Closed Principle (OCP). The calculator is designed with maintainability and extensibility in mind, allowing for new operations to be added easily without modifying the existing code.
 
 ## Features
-Basic Operations:
+**1. Basic Operations:**
 
 The calculator supports basic arithmetic operations such as ADD, SUBTRACT, MULTIPLY, and DIVIDE, which are defined in an Operation enum.
-## Single Calculation Method:
+
+**2. Single Calculation Method:**
 
 A calculate method in the Calculator class takes in two numbers and an operation, and returns the result of the operation.
 
@@ -23,7 +24,7 @@ A calculate method in the Calculator class takes in two numbers and an operation
 ```json
 { "result": 5.0 }
 ```
-## Chaining Operations:
+**3. Chaining Operations:**
 
 The calculator allows users to chain multiple operations on a single initial value, making it behave like a basic calculator. This enables performing multiple operations in sequence.
 **POST** `/api/v1/calculator/chain`
@@ -39,13 +40,15 @@ The calculator allows users to chain multiple operations on a single initial val
 ```json
 { "result": 6.0 }
 ```
-## Extensibility:
+**4. Extensibility:**
 
 The calculator is designed to be extensible, meaning new operations can be added by defining new constants in the Operation enum, without changing the core logic of the calculator.
-IoC (Inversion of Control) Compatibility:
+
+**5. IoC (Inversion of Control) Compatibility:**
 
 The design is compatible with an IoC environment (e.g., Spring Framework), making it easier to manage dependencies and enable unit testing with dependency injection.
-Error Handling:
+
+**6. Error Handling:**
 
 The solution handles invalid inputs (e.g., null operations, division by zero) gracefully by throwing appropriate exceptions such as IllegalArgumentException or UnsupportedOperationException.
 
